@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Website Layout</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #2c2c2c;
+      background-color: #f9f9f9;
+      line-height: 1.6;
+    }
+
+    /* Hero Section */
+    .hero {
+      background-image: url('/assets/photos/grey\ mountains.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      color: white;
+      text-align: center;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      font-weight: 300;
+    }
+
+    /* Section Layout */
+    .section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 10%;
+      gap: 40px;
+      background-color: #ffffff;
+    }
+
+    .section.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .text {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .text h2 {
+      font-size: 2em;
+      margin-bottom: 15px;
+      color: #d26d42;
+    }
+
+    .text p {
+      font-size: 1.1em;
+      margin-bottom: 20px;
+    }
+
+    .text button {
+      padding: 12px 24px;
+      background-color: #d26d42;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: all 0.3s ease;
+    }
+
+    .text button:hover {
+      background-color: #b35932;
+      transform: scale(1.05);
+    }
+
+    .image {
+      flex: 1;
+      min-width: 280px;
+      max-width: 450px;
+    }
+
+    .image img {
+      width: 80%;
+      height: 50%;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Image shadow added */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .image img:hover {
+      transform: scale(1.02);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* Hover shadow */
+    }
+
+    /* Our Products Section */
+    .products {
+      background-color: #f3ede0;
+      padding: 60px 10%;
+      text-align: center;
+    }
+
+    .products h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #4a4a4a;
+    }
+
+    .products p {
+      font-size: 1.1em;
+      max-width: 700px;
+      margin: auto;
+      color: #555;
+    }
+
+    /* Footer */
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      padding: 40px 10%;
+      flex-wrap: wrap;
+      background-color: #eee;
+      border-top: 2px solid #ccc;
+    }
+
+    .footer .text {
+      flex: 1;
+      margin-bottom: 20px;
+    }
+
+    .footer .text h2 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    .footer nav a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: #444;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .footer nav a:hover {
+      color: #d26d42;
+    }
+
+    @media (max-width: 768px) {
+      .section, .section.reverse, .footer {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .text, .image {
+        width: 100%;
+      }
+
+      .footer nav {
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Our Website</h1>
+      <p>Start your journey here!</p>
+    </div>
+  </div>
+
+  <!-- About Us -->
+  <div class="section">
+    <div class="text">
+      <h2>About Us</h2>
+      <p>We are a team of passionate individuals committed to delivering excellence through innovative services and products. With a strong focus on customer satisfaction, we aim to make a lasting impact in everything we do.</p>
+      <button onclick="document.getElementById('products').scrollIntoView({ behavior: 'smooth' })">Learn More</button>
+    </div>
+    <div class="image">
+      <img src="/assets/photos/treesss.webp" alt="Lake">
+    </div>
+  </div>
+
+  <!-- Our Services 1 -->
+  <div class="section reverse">
+    <div class="text">
+      <h2>Our Services</h2>
+      <p>From web development to digital marketing, our services are designed to help you grow. We provide tailored solutions that are efficient, scalable, and aligned with your goals.</p>
+    </div>
+    <div class="image">
+      <img src="/assets/photos/desert.jpeg" alt="Desert">
+    </div>
+  </div>
+
+  <!-- Our Services 2 -->
+  <div class="section">
+    <div class="text">
+      <h2>Our Services</h2>
+      <p>We believe in quality, commitment, and results. Whether it's UI/UX design, consulting, or branding, we bring creativity and precision to every project.</p>
+    </div>
+    <div class="image">
+      <img src="/assets/photos/sofa.jpeg" alt="Living Room">
+    </div>
+  </div>
+
+  <!-- Our Products -->
+  <div class="products" id="products">
+    <h2>Our Products</h2>
+    <p>Our range of products is crafted with the latest technology and customer needs in mind. From intuitive software solutions to user-friendly apps, each product is a result of thorough research and development.</p>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="text">
+      <h2>Learn More</h2>
+      <p>Discover more about what we offer, our vision, and how we can work together to achieve success.</p>
+    </div>
+    <nav>
+      <a href="web.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="blog.html">Blog</a>
+      <a href="product.html">Products</a>
+    </nav>
+  </div>
+
+</body>
+</html>

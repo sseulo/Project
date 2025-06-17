@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blog</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #fff;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .blog-container {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .blog-post {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 30px;
+    }
+
+    .blog-post img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .blog-post h2 {
+      margin: 0;
+      font-size: 1.5em;
+    }
+
+    .blog-post .date {
+      color: #777;
+      font-size: 0.9em;
+    }
+
+    .blog-post p {
+      font-size: 1em;
+      line-height: 1.6;
+    }
+
+    details summary {
+      cursor: pointer;
+      color: #007bff;
+      font-weight: bold;
+      list-style: none;
+    }
+
+    
+
+    details summary::marker {
+      display: none;
+    }
+
+    details p {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Blog</h1>
+
+  <div class="blog-container">
+
+    <!-- Blog Post One -->
+    <div class="blog-post">
+      <img src="/assets/photos/fl.jpeg" alt="Mountain View">
+      <h2>Blog Post One</h2>
+      <div class="date">June 17, 2024</div>
+      <p>Discover the serenity of misty mountains and how they inspire inner peace and reflection.</p>
+      <details>
+        <summary>Read More</summary>
+        <p>The early morning fog weaving through the peaks brings a sense of calm. Whether you're hiking or sipping coffee by a cabin window, mountain views offer a powerful reminder of nature's quiet strength and beauty. This post dives deeper into how mountain environments positively affect mental health and encourage mindfulness.</p>
+      </details>
+    </div>
+
+    <!-- Blog Post Two -->
+    <div class="blog-post">
+      <img src="/assets/photos/sea mountain.jpeg" alt="Greenery">
+      <h2>Blog Post Two</h2>
+      <div class="date">June 17, 2024</div>
+      <p>Urban gardening is becoming a powerful tool to bring nature back into city life.</p>
+      <details>
+        <summary>Read More</summary>
+        <p>Even in limited spaces, planting herbs, shrubs, or flowers on balconies and rooftops can significantly improve air quality and reduce stress levels. This post explores beginner tips for starting your own green corner and how small changes lead to a sustainable urban lifestyle.</p>
+      </details>
+    </div>
+
+  </div>
+
+</body>
+</html>
